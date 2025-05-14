@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fax History - Sinch Fax Sender</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Sinch Fax Sender</h1>
+    <p class="description">View your fax history and status</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">Send Fax</a></li>
+        <li><a href="history.html" class="active">Fax History</a></li>
+      </ul>
+    </nav>
+    
+    <div class="card">
+      <h2>Fax History</h2>
+      <div class="loading" id="loading">Loading fax history...</div>
+      <div id="historyError" class="error hidden"></div>
+      <div id="historyContent" class="hidden">
+        <table id="historyTable">
+          <thead>
+            <tr>
+              <th>Date/Time</th>
+              <th>To</th>
+              <th>Status</th>
+              <th>Pages</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody id="historyTableBody">
+            <!-- History rows will be inserted here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <div id="faxDetails" class="modal hidden">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Fax Details</h3>
+        <div id="faxDetailsContent"></div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="history.js"></script>
+</body>
+</html>

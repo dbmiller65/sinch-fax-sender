@@ -1,0 +1,330 @@
+:root {
+  --primary-color: #0263e0;
+  --secondary-color: #f22f46;
+  --background-color: #f5f5f5;
+  --card-background: #ffffff;
+  --text-color: #333333;
+  --success-color: #28a745;
+  --error-color: #dc3545;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.description {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.card {
+  background-color: var(--card-background);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+input[type="tel"],
+input[type="file"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+small {
+  display: block;
+  margin-top: 5px;
+  color: #666;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#result {
+  background-color: var(--card-background);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  margin-bottom: 30px;
+}
+
+#result.hidden {
+  display: none;
+}
+
+#resultContent {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 4px;
+  white-space: pre-wrap;
+  overflow-x: auto;
+}
+
+.success {
+  color: var(--success-color);
+}
+
+.error {
+  color: var(--error-color);
+}
+
+.pricing-info {
+  background-color: var(--card-background);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+}
+
+.pricing-info h3 {
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+
+.pricing-info p {
+  margin-bottom: 10px;
+}
+
+/* Navigation styles */
+nav {
+  margin-bottom: 30px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  background-color: var(--card-background);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+nav ul li {
+  flex: 1;
+}
+
+nav ul li a {
+  display: block;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #f0f0f0;
+}
+
+nav ul li a.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th, table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.no-data {
+  text-align: center;
+  padding: 30px;
+  color: #666;
+}
+
+/* Status indicators */
+.status-success {
+  color: var(--success-color);
+  font-weight: 600;
+}
+
+.status-failure {
+  color: var(--error-color);
+  font-weight: 600;
+}
+
+.status-in-progress {
+  color: #ffc107;
+  font-weight: 600;
+}
+
+.status-unknown {
+  color: #6c757d;
+  font-weight: 600;
+}
+
+/* Modal styles */
+.modal {
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background-color: var(--card-background);
+  margin: auto;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: var(--text-color);
+}
+
+/* Details button */
+.details-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  width: auto;
+}
+
+.details-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Fax details grid */
+.fax-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.error-details {
+  grid-column: 1 / -1;
+  background-color: #fff8f8;
+  border-left: 4px solid var(--error-color);
+  padding: 15px;
+  margin-top: 10px;
+}
+
+/* Loading and refresh */
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+
+.refresh-btn {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  width: auto;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.refresh-btn:hover {
+  background-color: #5a6268;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sinch Fax Sender</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Sinch Fax Sender</h1>
+    <p class="description">Send faxes easily and inexpensively using Sinch's Fax API</p>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Send Fax</a></li>
+        <li><a href="history.html">Fax History</a></li>
+      </ul>
+    </nav>
+    
+    <div class="card">
+      <h2>Send a Fax</h2>
+      <form id="faxForm">
+        <div class="form-group">
+          <label for="to">Fax Number:</label>
+          <input type="tel" id="to" name="to" placeholder="(555) 123-4567" pattern="\(\d{3}\) \d{3}-\d{4}" required>
+          <small>Format: (XXX) XXX-XXXX - US numbers only</small>
+        </div>
+
+        <div class="form-group">
+          <label for="faxText">Text Content:</label>
+          <textarea id="faxText" name="faxText" rows="6" placeholder="Enter text to include in your fax..."></textarea>
+          <small>This text will be included in your fax</small>
+        </div>
+        
+        <div class="form-group">
+          <label for="faxDocument">Document to Fax (Optional):</label>
+          <input type="file" id="faxDocument" name="faxDocument" accept=".pdf,.tif,.tiff,.jpg,.jpeg,.png">
+          <small>Accepted formats: PDF, TIFF, JPG, PNG</small>
+        </div>
+        
+        <button type="submit" id="sendButton">Send Fax</button>
+      </form>
+    </div>
+    
+    <div id="result" class="hidden">
+      <h3>Fax Status</h3>
+      <pre id="resultContent"></pre>
+    </div>
+    
+    <div class="pricing-info">
+      <h3>Sinch Fax Pricing</h3>
+      <p>Sending faxes: Starting at $0.07 per page</p>
+      <p>Receiving faxes: Starting at $0.05 per page + $2.00 per month for the phone number</p>
+      <p><small>Pricing may vary. Check <a href="https://www.sinch.com/products/fax/" target="_blank">Sinch's website</a> for current rates.</small></p>
+    </div>
+  </div>
+  
+  <script src="app.js"></script>
+</body>
+</html>
